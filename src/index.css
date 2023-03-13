@@ -213,7 +213,7 @@ header h1 {
 }
 .contenido-presupuesto span {
     font-weight: 900;
-    color: var(--azul);
+    color: var(--verde-oscuro);
 }
 .reset-app {
     border: none;
