@@ -17,7 +17,7 @@ const ControlPresupuesto = ({presupuesto, gastos}) => {
     }, [gastos]);
 
     const formatearCantidad = (cantidad) => {
-        return cantidad.toLocaleString('en-US',{
+        return cantidad?.toLocaleString('en-US',{
             style: 'currency',
             currency: 'USD'
         }) 

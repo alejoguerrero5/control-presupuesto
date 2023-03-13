@@ -388,7 +388,7 @@ body .modal {
 
 /*** SWIPE LIST OVERRIDES **/
 .swipe-action__leading {
-    background-color: var(--azul);
+    background-color: var(--verde);
     color: var(--blanco);
     margin-bottom: 2rem;
 }
