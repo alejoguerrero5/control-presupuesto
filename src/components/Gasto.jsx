@@ -28,12 +28,12 @@ const diccionarioIconos = {
     suscripciones: IconoSuscripciones,
 }
 
-const Gasto = ({ gasto , setGastoEditar}) => {
+const Gasto = ({ gasto, setGastoEditar }) => {
     const { categoria, nombre, cantidad, id, fecha } = gasto;
 
     const leadingActions = () => (
         <LeadingActions>
-            <SwipeAction onClick={()=>setGastoEditar(gasto)}>
+            <SwipeAction onClick={() => setGastoEditar(gasto)}>
                 Editar
             </SwipeAction>
         </LeadingActions>
@@ -41,7 +41,7 @@ const Gasto = ({ gasto , setGastoEditar}) => {
 
     const trailingActions = () => (
         <TrailingActions>
-            <SwipeAction onClick={()=>console.log('borrando')}>
+            <SwipeAction onClick={() => console.log('borrando')}>
                 Borrar
             </SwipeAction>
         </TrailingActions>
@@ -71,7 +71,12 @@ const Gasto = ({ gasto , setGastoEditar}) => {
                         </div>
                     </div>
 
-                    <p className='cantidad-gasto'>${cantidad}</p>
+                    <p className='cantidad-gasto'>{
+                        cantidad?.toLocaleString('en-US', {
+                            style: 'currency',
+                            currency: 'USD'
+                        })}
+                    </p>
 
                 </div>
             </SwipeableListItem>
